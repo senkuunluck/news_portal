@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from datetime import datetime
 from .models import Post
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
+from .filters import PostFilter
+from .forms import NewsForm
 
 class PostList(ListView):
     model = Post
@@ -25,6 +28,7 @@ class PostSearch(ListView):
     ordering = '-time_in'
     template_name = 'search.html'
     context_object_name = 'news'
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -35,3 +39,45 @@ class PostSearch(ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
         return context
+
+class NewsCreate(CreateView):
+    form_class = NewsForm
+    model = Post
+    template_name = 'news_create.html'
+
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        if self.request.path == '/news/articles/create/':
+            post.type = 'A'
+        post.save()
+        return super().form_valid(form)
+
+class NewsEdit(CreateView):
+    form_class = NewsForm
+    model = Post
+    template_name = 'news_edit.html'
+
+class NewsDelete(DeleteView):
+    model = Post
+    template_name = 'news_delete.html'
+    success_url = reverse_lazy('news')
+
+class ArticleCreate(CreateView):
+    form_class = NewsForm
+    model = Post
+    template_name = 'article_create.html'
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.type = 'A'
+        return super().form_valid(form)
+
+class ArticleEdit(CreateView):
+    form_class = NewsForm
+    model = Post
+    template_name = 'article_edit.html'
+
+class ArticleDelete(DeleteView):
+    model = Post
+    template_name = 'article_delete.html'
+    success_url = reverse_lazy('news')
+

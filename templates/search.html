@@ -1,7 +1,6 @@
 {% extends 'flatpages/default.html' %}
 
 {% load custom_filters %}
-
 {% load custom_tags %}
 
 {% block title %}
@@ -9,6 +8,11 @@ Post
 {% endblock title %}
 
 {% block content %}
+    <form action="" method="get">
+        {{ filterset.form.as_p }}
+        <input type="submit" value="Найти">
+    </form>
+
     <h1>Все новости</h1>
     <hr>
     <h3>Общее количество новостей: {{ news|length }}</h3>
@@ -19,7 +23,6 @@ Post
                 <td><u>Заголовок</u></td>
                 <td><u>Дата публикации</u></td>
                 <td><u>Превью статьи</u></td>
-                <td><u>Тип публикации</u></td>
             </tr>
 
             {% for separate_news in news %}
@@ -27,7 +30,6 @@ Post
                 <td>{{ separate_news.title|censor }}</td>
                 <td>{{ separate_news.time_in|date:'d M Y' }}</td>
                 <td>{{ separate_news.text|truncatewords:20|censor }}</td>
-                <td>{{ separate_news.type }}</td>
             </tr>
             {% endfor %}
         </table>
