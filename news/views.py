@@ -5,6 +5,7 @@ from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .filters import PostFilter
 from .forms import NewsForm
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class PostList(ListView):
     model = Post
@@ -52,10 +53,11 @@ class NewsCreate(CreateView):
         post.save()
         return super().form_valid(form)
 
-class NewsEdit(CreateView):
+class NewsEdit(PermissionRequiredMixin, CreateView):
     form_class = NewsForm
     model = Post
     template_name = 'news_edit.html'
+    permission_required = ('news.change_post')
 
 class NewsDelete(DeleteView):
     model = Post
