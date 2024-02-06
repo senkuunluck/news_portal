@@ -5,7 +5,7 @@
 {% load custom_tags %}
 
 {% block title %}
-Post
+Category
 {% endblock title %}
 
 {% block content %}
@@ -13,7 +13,7 @@ Post
     <hr>
     <h3>Общее количество новостей: {{ news|length }}</h3>
     <hr>
-    {% if news %}
+    {% if category_news_list %}
         <table width="100%" style="margin-top: 35px">
             <tr>
                 <td><u>Заголовок</u></td>
@@ -23,7 +23,7 @@ Post
                 <td><u>Категория</u></td>
             </tr>
 
-            {% for separate_news in news %}
+            {% for separate_news in category_news_list %}
             <tr>
                 <td>{{ separate_news.title|censor }}</td>
                 <td>{{ separate_news.time_in|date:'d M Y' }}</td>
@@ -31,7 +31,7 @@ Post
                 <td>{{ separate_news.type }}</td>
                 <td>
                     {% for category in separate_news.category.all %}
-                        <a href="{% url 'category list' category.id %">{{ category }}</a>
+                        <a href="{% url 'category_list' category.id %}"> {{ category}} </a>
                     {% endfor %}
                 </td>
             </tr>

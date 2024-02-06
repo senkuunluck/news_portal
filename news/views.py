@@ -1,18 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from datetime import datetime
-from .models import Post
+from .models import Post, Category
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .filters import PostFilter
 from .forms import NewsForm
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
-
+from django.contrib.auth.decorators import login_required
 class PostList(ListView):
     model = Post
     ordering = '-time_in'
     template_name = 'news.html'
     context_object_name = 'news'
     paginate_by = 10
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -85,3 +86,26 @@ class ArticleDelete(DeleteView):
     template_name = 'article_delete.html'
     success_url = reverse_lazy('news')
 
+class CategoryListView(ListView):
+    model = Post
+    template_name = 'news/category_list.html'
+    context_object_name = 'category_news_list'
+
+    def get_queryset(self):
+        self.category = get_object_or_404(Category, id=self.kwargs['pk'])
+        queryset = Post.objects.filter(category=self.category).order_by('-time_in')
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['is_not_subscriber'] = self.request.user not in self.category.subscribers.all()
+        context['category'] = self.category
+        return context
+@login_required
+def subscribe(request, pk):
+    user = request.user
+    category = Category.objects.get(id=pk)
+    category.subscribers.add(user)
+
+    message = 'Вы успешно подписались на рассылку новостей категории'
+    return render(request, 'news/subscribe.html', {'category': category, 'message': message})

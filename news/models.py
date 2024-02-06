@@ -23,6 +23,10 @@ class Author(models.Model):
 
 class Category(models.Model):
     name_of_category = models.CharField(max_length=255, unique=True)
+    subscribers = models.ManyToManyField(User, blank=True, null=True, related_name='categories')
+
+    def __str__(self):
+        return self.name_of_category
 
 class Post(models.Model):
     article = 'A'
