@@ -31,7 +31,7 @@ Post
                 <td>{{ separate_news.type }}</td>
                 <td>
                     {% for category in separate_news.category.all %}
-                        <a href="{% url 'category list' category.id %">{{ category }}</a>
+                        <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                     {% endfor %}
                 </td>
             </tr>

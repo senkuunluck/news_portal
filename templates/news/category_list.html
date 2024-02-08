@@ -9,9 +9,11 @@ Category
 {% endblock title %}
 
 {% block content %}
-    <h1>Все новости</h1>
+    <h1>Все новости данной категории</h1>
     <hr>
-    <h3>Общее количество новостей: {{ news|length }}</h3>
+    {% if is_not_subscriber %}
+        <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm">Подписаться</a></p>
+    {% endif %}
     <hr>
     {% if category_news_list %}
         <table width="100%" style="margin-top: 35px">
@@ -31,7 +33,7 @@ Category
                 <td>{{ separate_news.type }}</td>
                 <td>
                     {% for category in separate_news.category.all %}
-                        <a href="{% url 'category_list' category.id %}"> {{ category}} </a>
+                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                     {% endfor %}
                 </td>
             </tr>
