@@ -11,16 +11,16 @@ from django_apscheduler.models import DjangoJobExecution
 from news.models import Post, Category
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
-
+from django.utils import timezone
 logger = logging.getLogger(__name__)
 
 
 # наша задача по выводу текста на экран
 def my_job():
-    today = datetime.datetime.now()
+    today = timezone.now()
     last_week = today - datetime.timedelta(days=7)
     posts = Post.objects.filter(time_in__gte=last_week)
-    categories = set(posts.values_list('categories__name_of_category', flat=True))
+    categories = set(posts.values_list('category__name_of_category', flat=True))
     subscribers = set(Category.objects.filter(name_of_category__in=categories).values_list('subscribers__email', flat=True))
 
     html_content = render_to_string(
@@ -55,7 +55,7 @@ class Command(BaseCommand):
         # добавляем работу нашему задачнику
         scheduler.add_job(
             my_job,
-            trigger=CronTrigger(day_of_week="thu", hour="4", minute="30"),
+            trigger=CronTrigger(day_of_week="thu", hour="12", minute="51", timezone='UTC'),
             # То же, что и интервал, но задача тригера таким образом более понятна django
             id="my_job",  # уникальный айди
             max_instances=1,
