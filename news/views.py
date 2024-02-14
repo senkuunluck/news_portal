@@ -54,7 +54,7 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
         if self.request.path == '/news/articles/create/':
             post.type = 'A'
         post.save()
-        new_post.delay(form.valid.pk)
+        new_post.delay(post.pk)
         return super().form_valid(form)
 
 class NewsEdit(PermissionRequiredMixin, CreateView):

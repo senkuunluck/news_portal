@@ -15,10 +15,10 @@ def new_post(pk):
     categories = post.category.all()
     title = post.title
     preview = post.preview()
-    subscribers: list[str] = []
+    subscribers_emails = []
     for category in categories:
-        subscribers += category.subscribers.all()
-        subscribers = [s.email for s in subscribers]
+        subscribers = category.subscribers.all()
+        subscribers_emails += [s.email for s in subscribers]
 
     html_content = render_to_string(
         'post_created.html',
@@ -32,7 +32,7 @@ def new_post(pk):
         subject=title,
         body='',
         from_email=settings.DEFAULT_FROM_EMAIL,
-        to=subscribers,
+        to=subscribers_emails,
     )
 
     msg.attach_alternative(html_content, 'text/html')
@@ -44,11 +44,11 @@ def weekly_post():
     last_week = today - timedelta(days=7)
     posts = Post.objects.filter(datetime_post__gte=last_week)
     cat = set(posts.values_list('category__name', flat=True))
-    subs = set(Category.objects.filter(name__in=cat).values_list('subscriber__email', flat=True))
+    subs = set(Category.objects.filter(name__in=cat).values_list('subscribers__email', flat=True))
 
     from NewsPortal.NewsPortal.settings import SITE_URL
     html_context = render_to_string(
-        'account/email/email_weekly_posts.html',
+        'email_weekly_posts.html',
         {
             'head_link': f'{SITE_URL}',
             'posts': posts,
