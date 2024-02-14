@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 
 from celery import shared_task
+from django.conf.global_settings import EMAIL_HOST_USER
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
 
 from .models import PostCategory, Post, Category
-from ..NewsPortal.settings import EMAIL_HOST_USER
 
 
 @shared_task
@@ -15,7 +15,7 @@ def new_post(pk):
     categories = post.category.all()
     title = post.title
     preview = post.preview()
-    subscribers = []
+    subscribers: list[str] = []
     for category in categories:
         subscribers += category.subscribers.all()
         subscribers = [s.email for s in subscribers]
