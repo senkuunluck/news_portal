@@ -7,6 +7,7 @@ from .filters import PostFilter
 from .forms import NewsForm
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from .task import new_post
 class PostList(ListView):
     model = Post
     ordering = '-time_in'
@@ -53,6 +54,7 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
         if self.request.path == '/news/articles/create/':
             post.type = 'A'
         post.save()
+        new_post.delay(form.instance.pk)
         return super().form_valid(form)
 
 class NewsEdit(PermissionRequiredMixin, CreateView):
