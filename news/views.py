@@ -8,6 +8,8 @@ from .forms import NewsForm
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .task import new_post
+
+
 class PostList(ListView):
     model = Post
     ordering = '-time_in'

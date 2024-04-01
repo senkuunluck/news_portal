@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import PostList, PostDetail, PostSearch, NewsCreate, NewsEdit, NewsDelete, ArticleCreate, ArticleEdit, \
    ArticleDelete, CategoryListView, subscribe
+from django.views.decorators.cache import cache_page
 
 urlpatterns = [
    path('', PostList.as_view(), name='news'),
