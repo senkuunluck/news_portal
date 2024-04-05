@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-05 14:35+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\news\views.py:123
+msgid "Hello world"
+msgstr ""
+
+#: .\templates\flatpages\default.html:27
+msgid "Русский"
+msgstr ""
+
+#: .\templates\flatpages\default.html:54
+msgid "NEWSPORTAL"
+msgstr "НОВОСТИ"
+
+#: .\templates\flatpages\default.html:64
+msgid "HOME"
+msgstr "Домашняя"
+
+#: .\templates\flatpages\default.html:65
+msgid "(main)"
+msgstr "главная"
+
+#: .\templates\flatpages\default.html:68
+msgid "Выйти"
+msgstr ""
+
+#: .\templates\flatpages\default.html:69
+msgid "CREATE NEWS"
+msgstr "Создать новость"
+
+#: .\templates\flatpages\default.html:70
+msgid "CREATE ARTICLE"
+msgstr "Создать статью"
+
+#: .\templates\news.html:12
+msgid "Все новости"
+msgstr ""
+
+#: .\templates\news.html:14
+msgid "Общее количество новостей"
+msgstr ""
+
+#: .\templates\news.html:19 .\templates\news\category_list.html:21
+msgid "Заголовок"
+msgstr ""
+
+#: .\templates\news.html:20 .\templates\news\category_list.html:22
+msgid "Дата публикации"
+msgstr ""
+
+#: .\templates\news.html:21 .\templates\news\category_list.html:23
+msgid "Превью статьи"
+msgstr ""
+
+#: .\templates\news.html:22 .\templates\news\category_list.html:24
+msgid "Тип публикации"
+msgstr ""
+
+#: .\templates\news.html:23 .\templates\news\category_list.html:25
+msgid "Категория"
+msgstr ""
+
+#: .\templates\news.html:41 .\templates\news\category_list.html:43
+msgid "Новостей нет!"
+msgstr ""
+
+#: .\templates\news\category_list.html:12
+msgid "Все новости данной категории"
+msgstr ""
+
+#: .\templates\news\category_list.html:15
+msgid "Подписаться"
+msgstr ""

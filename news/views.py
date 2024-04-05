@@ -1,6 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from datetime import datetime
+
+from django.views import View
+from django.utils.translation import gettext as _
 from .models import Post, Category
 from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .filters import PostFilter
@@ -8,7 +12,6 @@ from .forms import NewsForm
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from .task import new_post
-
 
 class PostList(ListView):
     model = Post
@@ -113,3 +116,10 @@ def subscribe(request, pk):
 
     message = 'Вы успешно подписались на рассылку новостей категории'
     return render(request, 'news/subscribe.html', {'category': category, 'message': message})
+
+
+class Index(View):
+    def get(self, request):
+        string = _('Hello world')
+
+        return HttpResponse(string)

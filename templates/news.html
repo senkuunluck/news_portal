@@ -1,5 +1,5 @@
 {% extends 'flatpages/default.html' %}
-
+{% load i18n %}
 {% load custom_filters %}
 
 {% load custom_tags %}
@@ -9,18 +9,18 @@ Post
 {% endblock title %}
 
 {% block content %}
-    <h1>Все новости</h1>
+    <h1>{% trans 'Все новости' %}</h1>
     <hr>
-    <h3>Общее количество новостей: {{ news|length }}</h3>
+    <h3>{% trans 'Общее количество новостей' %}: {{ news|length }}</h3>
     <hr>
     {% if news %}
         <table width="100%" style="margin-top: 35px">
             <tr>
-                <td><u>Заголовок</u></td>
-                <td><u>Дата публикации</u></td>
-                <td><u>Превью статьи</u></td>
-                <td><u>Тип публикации</u></td>
-                <td><u>Категория</u></td>
+                <td><u>{% trans 'Заголовок' %}</u></td>
+                <td><u>{% trans 'Дата публикации' %}</u></td>
+                <td><u>{% trans 'Превью статьи' %}</u></td>
+                <td><u>{% trans 'Тип публикации' %}</u></td>
+                <td><u>{% trans 'Категория' %}</u></td>
             </tr>
 
             {% for separate_news in news %}
@@ -38,7 +38,7 @@ Post
             {% endfor %}
         </table>
     {% else %}
-        <h2>Новостей нет!</h2>
+        <h2>{% trans 'Новостей нет!' %}</h2>
     {% endif %}
     {% if page_obj.has_previous %}
        <a href="?page=1">1</a>

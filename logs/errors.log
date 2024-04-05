@@ -1,0 +1,288 @@
+05.04.2024 13-51-58 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name."), <traceback object at 0x00000218341BC100>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+05.04.2024 13-51-59 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 154998 None
+05.04.2024 13-53-01 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name."), <traceback object at 0x00000218343A0140>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_language' not found. 'set_language' is not a valid view function or pattern name.
+05.04.2024 13-53-01 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 157707 None
+05.04.2024 14-06-53 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'articles_create' not found. 'articles_create' is not a valid view function or pattern name."), <traceback object at 0x0000018EEDBB7FC0>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'articles_create' not found. 'articles_create' is not a valid view function or pattern name.
+05.04.2024 14-06-53 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 166439 None
+05.04.2024 14-07-29 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'articles' not found. 'articles' is not a valid view function or pattern name."), <traceback object at 0x0000018EED7E0400>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'articles' not found. 'articles' is not a valid view function or pattern name.
+05.04.2024 14-07-29 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 166264 None
+05.04.2024 14-07-34 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'articles' not found. 'articles' is not a valid view function or pattern name."), <traceback object at 0x0000018EEDD3C100>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'articles' not found. 'articles' is not a valid view function or pattern name.
+05.04.2024 14-07-35 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 166264 None
+05.04.2024 14-07-48 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'articles/create' not found. 'articles/create' is not a valid view function or pattern name."), <traceback object at 0x0000018EED804440>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'articles/create' not found. 'articles/create' is not a valid view function or pattern name.
+05.04.2024 14-07-48 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 166439 None
+05.04.2024 14-08-04 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\utils\log.py Internal Server Error: /news/ (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name."), <traceback object at 0x0000018EED806740>)
+Traceback (most recent call last):
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+05.04.2024 14-08-04 ERROR C:\Users\lekta\PycharmProjects\pythonProject6\venv\lib\site-packages\django\core\servers\basehttp.py "GET /news/ HTTP/1.1" 500 189989 None

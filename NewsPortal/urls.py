@@ -24,4 +24,5 @@ urlpatterns = [
    path('sign/', include('sign.urls')),
    path('', include('protect.urls')),
    path('accounts/', include('allauth.urls')),
+   path('i18n/', include('django.conf.urls.i18n')),
 ]

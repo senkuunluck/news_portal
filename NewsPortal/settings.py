@@ -37,6 +37,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'NewsPortal.urls'
@@ -130,8 +132,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
+LANGUAGE_CODE = 'ru'
+LANGUAGES = [
+    ('en-us', 'English'),
+    ('ru', 'Русский')
+]
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -299,3 +304,7 @@ LOGGING = {
         },
     },
 }
+
+LOCALE_PATH = [
+    os.path.join(BASE_DIR, 'locale')
+]
